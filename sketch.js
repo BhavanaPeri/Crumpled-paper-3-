@@ -40,6 +40,7 @@ function draw() {
 	Dbin.display(); 
 	dbin.display();
 	bin.display ();
+	launcher.display();
   drawSprites();
  
 }
