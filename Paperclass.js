@@ -10,11 +10,16 @@ class Paperclass {
         this.r=r;
         this.y=y;
         this.body=Bodies.circle(this.x,this.y,35,options)
+        this.image= loadImage("crumpled paper.png");
         World.add(world,this.body);
     }
     display(){
-        ellipseMode(CENTER);
-        fill (150)
-        ellipse(this.body.position.x,this.body.position.y,35,30)
+        var angle = this.body.angle;
+        push();
+        translate(this.body.position.x, this.body.position.y);
+        rotate(angle);
+        imageMode(CENTER);
+        image(this.image, 0, 0, 50,50);
+        pop();
     }
 }
